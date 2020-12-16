@@ -17,9 +17,11 @@ n + m integers in sorted order
 Sample Input
 
 3
+
 1 5 20
 
 3
+
 2 5 30
 
 Sample Output
