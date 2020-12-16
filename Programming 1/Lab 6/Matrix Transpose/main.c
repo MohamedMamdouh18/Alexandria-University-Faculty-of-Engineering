@@ -17,30 +17,17 @@ int main()
      for(int j = 0 ; j < c ; j ++ )
      {
          scanf("%i" , &mat1[i][j]);
-     }
- }
- 
-  for(int i = 0 ; i < r ; i ++ )
- {
-     for(int j = 0 ; j < c ; j ++ )
-     {
          mat2[j][i] = mat1[i][j];
      }
  }
-
+ 
   for(int j = 0 ; j < c ; j ++  )
  {
      for(int i = 0 ; i < r ; i ++ )
      {
-         if ( i == (r-1))
-         {
-             printf("%i\n" , mat2[j][i]);
-         }
-         else
-         {
              printf("%i " , mat2[j][i]);
-         }
+         
      }
+      printf("\n");
  }
-
 }
