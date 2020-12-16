@@ -18,8 +18,10 @@ Sample Input
 
 3
 1 5 20
+
 3
 2 5 30
+
 Sample Output
 
 1 2 5 5 20 30
