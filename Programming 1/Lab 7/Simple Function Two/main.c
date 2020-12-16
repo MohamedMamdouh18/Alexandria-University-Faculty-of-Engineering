@@ -13,20 +13,13 @@ int main() {
 
 void simple_func_2(int a , int b)
 {
-    int list[10] ;
-    int j = 0 ;
-    while(a > 0)
+    int num ;
+    int j = b ;
+    while(j > 0)
     {
-        list[j] = a % 10 ;
+        num = a % 10 ;
         a = a / 10 ;
-        j ++ ;
+        j -- ;
     }
-    if (b > j)
-    {
-        printf("0") ;
-    }
-    else
-    {
-    printf("%i" , list[b - 1]) ;
-    }
+    printf("%i" , num) ;
 }
