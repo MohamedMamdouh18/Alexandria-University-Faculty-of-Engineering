@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void scan_all_arrays(int n) ;
+void scan_all_arrays(int n ,int l , int a[]) ;
 long long int sum_array(long long int num) ;
 long long int least_array(long long int sum) ;
 
@@ -8,10 +8,11 @@ int main()
 {
     int n ;
     scanf("%i" , &n) ;
-    scan_all_arrays(n) ;
+    int a[n] ;
+    scan_all_arrays(n , n , a) ;
 }
 
-void scan_all_arrays(int n)
+void scan_all_arrays(int n , int l , int a[])
 {   long long int num , sum = 0;
     int least ;
     if(n == 0)
@@ -23,8 +24,9 @@ void scan_all_arrays(int n)
         scanf("%lld" , &num) ;
         sum = sum_array(num) ;
         least = least_array(sum) ;
-        printf("%i\n" , least) ;
-        scan_all_arrays(n - 1) ;
+        a[n - 1] = least ;
+        scan_all_arrays(n - 1 , l , a) ;
+        printf("%i \n" , a[l - n]) ;
     }
 }
 
