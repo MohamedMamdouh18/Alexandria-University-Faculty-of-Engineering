@@ -5,40 +5,31 @@ import java.math.*;
 import java.util.regex.*;
 
 interface ICalculator {
-    /**
-    * Adds given two numbers
-    * @param x first number
-    * @param y second number
-    * @return the sum of the two numbers
-    */
     int add(int x, int y);
-    /**
-    * Divides two numbers
-    * @param x first number
-    * @param y second number
-    * @return the division result
-    */
-    float divide(int x, int y) throws RuntimeException;
+    float divide(int x, int y) throws RuntimeException ;
 }
 
 class Calcuator implements ICalculator{
-  /* Implement your calculator class here*/
   public int add(int x , int y)
   {
-      return x + y ;
+      System.out.println(x + y);
+      return 0 ;
   }
   public float divide(int x , int y)
   {
-      float f = (float)x / y ;
-      return f ;
+      if (y == 0){
+        throw new RuntimeException() ;
+      }else{
+        System.out.println((float) x / y);
+        return 0;
+      }
   }
 }
 
 class Solution{
     public static void main(String args[]) {
         Scanner x = new Scanner(System.in) ;
-        int one , two , ans1 ;
-        float ans2 ;
+        int one , two ;
         char opr ;
         one = x.nextInt() ;
         opr = x.next().charAt(0) ;
@@ -47,18 +38,17 @@ class Solution{
         
         if(opr == '+')
         {
-            ans1 = y.add(one, two) ;
-            System.out.println(ans1) ;
+            y.add(one, two) ;
         }
         else {
-            if(two == 0)
+            try{
+                y.divide(one, two) ;
+            }
+            catch(RuntimeException e)
             {
-                System.out.println("Error") ;
+                System.out.println("Error") ;     
             }
-            else {
-                ans2 = y.divide(one, two) ;
-                System.out.println(ans2) ;
-            }
+            
         }
         x.close();
     }
