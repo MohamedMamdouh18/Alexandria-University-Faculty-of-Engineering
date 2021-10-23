@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1604016540 source:m:\csed\programming\problem1 average grade\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1604023784 source:m:\csed\programming\lab 2\problem1 average grade\main.c
+	<stdio.h>
+	<stdlib.h>
+
